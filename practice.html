@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* simple selector */
+      a {
+        color: red;
+      }
+
+      .link2 {
+        color: blue;
+      }
+
+      #link3 {
+        color: green;
+      }
+
+      * {
+        color: black;
+      }
+
+      /* combinator selector */
+
+      /*
+            1.Child-selector (>)
+            2. Descendent selector (space)
+            3. Neighbour selector (+)
+        
+        
+        */
+
+      section:nth-child(1) > nav {
+        border: 1px solid red;
+      }
+
+      section:nth-child(1),
+      section:nth-child(2),
+      section:nth-child(3) {
+        border: 1px solid green;
+      }
+
+      h1 {
+        color: green;
+      }
+
+      h3 {
+        color: green;
+      }
+
+      /*Grouping selector*/
+      h1,
+      h3 {
+        color: green;
+      }
+
+      section > article > article {
+        border: 1px solid yellow;
+      }
+
+      /*descendent selector*/
+      section article {
+        border: 2px solid brown;
+      }
+
+      /*adjacent sibling selector*/
+      h1 + article {
+        border: 1px solid violet;
+      }
+
+      article + article {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section>
+        <nav>
+          <a href="#" style="" />
+          <a class="link2" href="#home" />
+          <a id="link3" href="#jobs" />
+        </nav>
+      </section>
+    </header>
+    <section>
+      <h1>Section 1</h1>
+      <article>
+        <!--1-->
+        <h3>Article 1</h3>
+        <article>
+          <!--2-->
+          <h4>Sub Article 1</h4>
+        </article>
+      </article>
+      <article>
+        <!--1-->
+        <h3>Article 2</h3>
+      </article>
+      <article>
+        <!--1-->
+        <h3>Article 3</h3>
+      </article>
+    </section>
+  </body>
+</html>
